@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.BeanIds;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -20,14 +22,12 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
-
+public class RESTWebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JWTAuthenticationEntryPoint unauthorizedHandler;
-
     @Autowired
     private UserDetailsService userDetailsService;
-    
+
     @Autowired
     public void configureAuthentication(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
         authenticationManagerBuilder
@@ -39,10 +39,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-    
+
     @Bean
     public JWTAuthenticationTokenFilter authenticationTokenFilterBean() throws Exception {
         return new JWTAuthenticationTokenFilter();
+    }
+
+    @Bean(name = BeanIds.AUTHENTICATION_MANAGER)
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
     }
 
     @Override
@@ -68,24 +74,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                         "/**/*.css",
                         "/**/*.js"
                 ).permitAll()
-                
+
                 //注册
-                .antMatchers(HttpMethod.POST,"/users").permitAll()
+                .antMatchers(HttpMethod.POST, "/users").permitAll()
                 //获取头像
-                .antMatchers(HttpMethod.GET,"/users/avatar").permitAll()
+                .antMatchers(HttpMethod.GET, "/users/avatar").permitAll()
                 //用户激活
-                .antMatchers(HttpMethod.GET,"/users/*/activation").permitAll()
+                .antMatchers(HttpMethod.GET, "/users/*/activation").permitAll()
                 //用户申请忘记密码
-                .antMatchers(HttpMethod.GET,"/users/*/password/reset_validation").permitAll()
+                .antMatchers(HttpMethod.GET, "/users/*/password/reset_validation").permitAll()
                 //用户忘记密码后重置密码
-                .antMatchers(HttpMethod.PUT,"/users/*/password").permitAll()
+                .antMatchers(HttpMethod.PUT, "/users/*/password").permitAll()
                 //检查用户名是否重复
-                .antMatchers(HttpMethod.GET,"/users/*/duplication").permitAll()
+                .antMatchers(HttpMethod.GET, "/users/*/duplication").permitAll()
                 //获取token
-                .antMatchers(HttpMethod.POST,"/tokens").permitAll()
+                .antMatchers(HttpMethod.POST, "/tokens").permitAll()
                 //获取图片验证码
-                .antMatchers(HttpMethod.GET,"/captchas").permitAll()
-                
+                .antMatchers(HttpMethod.GET, "/captchas").permitAll()
+
                 // 除上面外的所有请求全部需要鉴权认证
                 .anyRequest().authenticated();
 

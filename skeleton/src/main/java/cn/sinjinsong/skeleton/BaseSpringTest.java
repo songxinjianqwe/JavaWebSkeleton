@@ -1,4 +1,4 @@
-package cn.sinjinsong.skeleton.service;
+package cn.sinjinsong.skeleton;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -11,15 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration(locations = { 
-        "classpath:spring/spring-dao.xml",
-        "classpath:spring/spring-service.xml",
-        "classpath:spring/spring-security.xml",
-        "classpath:spring/spring-redis.xml",
-        "classpath:spring/spring-util.xml",
-        "classpath:spring/spring-email.xml",
-        "classpath:spring/spring-client.xml"
-})
+@ContextConfiguration(locations = {"classpath:spring/spring-*.xml"})
 @Transactional
 public class BaseSpringTest {
     
