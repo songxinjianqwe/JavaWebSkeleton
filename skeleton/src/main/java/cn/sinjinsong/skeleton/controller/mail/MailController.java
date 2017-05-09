@@ -8,6 +8,7 @@ import cn.sinjinsong.skeleton.enumeration.mail.QueryMailTarget;
 import cn.sinjinsong.skeleton.enumeration.mail.SendMode;
 import cn.sinjinsong.skeleton.exception.mail.MailStatusNotFoundException;
 import cn.sinjinsong.skeleton.exception.mail.MailTargetNotFoundException;
+import cn.sinjinsong.skeleton.security.util.SecurityUtil;
 import cn.sinjinsong.skeleton.service.mail.MailService;
 import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.*;
@@ -53,8 +54,9 @@ public class MailController {
         throw new MailTargetNotFoundException(target);
     }
     
+    
     @RequestMapping(method = RequestMethod.POST)
-    @PreAuthorize("hasRole('ADMIN') or (hasRole('USER') and #mailDTO.sendMode != SendMode.BROADCAST)")
+    @PreAuthorize("hasRole('ADMIN') or (hasRole('USER') and #mailDTO.sendMode.toString() != 'BROADCAST' )")
     @ApiOperation(value = "发送站内信，可以单独发送、批量或广播", notes = "如果是单独发送或批量，那么必须指定receivers，并将sendMode置为BATCH；如果是广播，那么无需指定receivers，并将SendMode置为BROADCAST")
     @ApiResponses(value = {
             @ApiResponse(code = 400, message = "mail对象属性校验失败")
@@ -63,10 +65,12 @@ public class MailController {
         if (result.hasErrors()) {
             throw new ValidationException(result.getFieldErrors());
         }
+        Long senderId = SecurityUtil.currentUserId();
+        System.out.println("senderId"+senderId);
         if (mailDTO.getSendMode() == SendMode.BATCH) {
-            mailService.send(mailDTO.getSender(), mailDTO.getReceivers(), mailDTO.getText());
+            mailService.send(senderId, mailDTO.getReceivers(), mailDTO.getText());
         } else if (mailDTO.getSendMode() == SendMode.BROADCAST) {
-            mailService.broadcast(mailDTO.getSender(), mailDTO.getText());
+            mailService.broadcast(senderId, mailDTO.getText());
         }
     }
 

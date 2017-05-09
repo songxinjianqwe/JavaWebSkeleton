@@ -10,8 +10,6 @@ import java.util.List;
  * Created by SinjinSong on 2017/5/5.
  */
 public class MailDTO {
-    @NotNull
-    private Long sender;
     private List<Long> receivers;
     @NotNull
     private String text;
@@ -26,14 +24,6 @@ public class MailDTO {
 
     public void setSendMode(SendMode sendMode) {
         this.sendMode = sendMode;
-    }
-
-    public Long getSender() {
-        return sender;
-    }
-
-    public void setSender(Long sender) {
-        this.sender = sender;
     }
 
     public List<Long> getReceivers() {
@@ -55,8 +45,7 @@ public class MailDTO {
     @Override
     public String toString() {
         return "MailDTO{" +
-                "sender=" + sender +
-                ", receivers=" + receivers +
+                "receivers=" + receivers +
                 ", text='" + text + '\'' +
                 ", sendMode=" + sendMode +
                 '}';

@@ -186,6 +186,6 @@
         select user
         from user_role 
         where role in 
-        (select id from role where role_name = 'user')
+        (select id from role where role_name = 'role_user')
     </select>
 </mapper>

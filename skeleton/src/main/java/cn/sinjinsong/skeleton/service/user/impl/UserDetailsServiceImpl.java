@@ -38,7 +38,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 user.getUserStatus() != UserStatus.FORBIDDEN,
                 true,
                 true,
-                user.getRoles().stream().map((r) -> new SimpleGrantedAuthority(r.getRoleName())).collect(Collectors.toList())
+                user.getRoles().stream().map((r) -> new SimpleGrantedAuthority(r.getRoleName().toUpperCase())).collect(Collectors.toList())
         );
     }
 }

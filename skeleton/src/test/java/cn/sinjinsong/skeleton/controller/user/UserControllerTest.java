@@ -2,11 +2,17 @@ package cn.sinjinsong.skeleton.controller.user;
 
 import cn.sinjinsong.common.cache.CacheManager;
 import cn.sinjinsong.skeleton.BaseSpringTest;
+import cn.sinjinsong.skeleton.domain.dto.mail.MailDTO;
 import cn.sinjinsong.skeleton.domain.entity.user.UserDO;
+import cn.sinjinsong.skeleton.enumeration.mail.SendMode;
 import cn.sinjinsong.skeleton.enumeration.user.UserMode;
 import cn.sinjinsong.skeleton.service.user.UserService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.expression.EvaluationContext;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
@@ -38,8 +44,15 @@ public class UserControllerTest extends BaseSpringTest{
     }
     
     @Test
-    public void cache(){
-        cacheManager.put("39E82013BAF14F67A34A835EFFB663F4","MJXV");    
+    public void spEL(){
+//        cacheManager.put("39E82013BAF14F67A34A835EFFB663F4","MJXV"); 
+        EvaluationContext context = new StandardEvaluationContext();
+        MailDTO mailDTO  = new MailDTO();
+        mailDTO.setSendMode(SendMode.BROADCAST);
+        context.setVariable("mailDTO",mailDTO);
+        ExpressionParser parser = new SpelExpressionParser();
+        Object value = parser.parseExpression("#mailDTO.sendMode.toString()  != BROADCAST").getValue();
+        System.out.println(value);
     }
     
     @Test

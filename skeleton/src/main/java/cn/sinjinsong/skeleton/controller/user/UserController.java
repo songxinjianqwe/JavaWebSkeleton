@@ -94,8 +94,6 @@ public class UserController {
             throw new ValidationException(result.getFieldErrors());
         }
         
-        
-        
         //生成邮箱的激活码
         String activationCode = UUIDUtil.uuid();
         //保存用户

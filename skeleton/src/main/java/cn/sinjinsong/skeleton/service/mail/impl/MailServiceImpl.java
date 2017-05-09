@@ -7,6 +7,7 @@ import cn.sinjinsong.skeleton.domain.entity.mail.MailDO;
 import cn.sinjinsong.skeleton.domain.entity.mail.MailTextDO;
 import cn.sinjinsong.skeleton.domain.entity.user.UserDO;
 import cn.sinjinsong.skeleton.enumeration.mail.MailStatus;
+import cn.sinjinsong.skeleton.exception.mail.MailReceiverNotFoundException;
 import cn.sinjinsong.skeleton.service.mail.MailService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,6 +54,9 @@ public class MailServiceImpl implements MailService {
     @Transactional
     @Override
     public void send(Long sender, List<Long> receivers, String text) {
+        if(receivers == null || receivers.size() == 0){
+            throw new MailReceiverNotFoundException(sender);
+        }
         MailTextDO mailTextDO = new MailTextDO(null, LocalDateTime.now(), text);
         mailTextDOMapper.insert(mailTextDO);
         List<MailDO> mailDOS = new ArrayList<>(receivers.size());

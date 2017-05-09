@@ -2,15 +2,15 @@ package cn.sinjinsong.skeleton.controller.user;
 
 import cn.sinjinsong.common.exception.ValidationException;
 import cn.sinjinsong.common.util.SpringContextUtil;
+import cn.sinjinsong.skeleton.domain.dto.user.LoginDTO;
 import cn.sinjinsong.skeleton.domain.entity.user.UserDO;
 import cn.sinjinsong.skeleton.enumeration.user.UserStatus;
 import cn.sinjinsong.skeleton.exception.token.CaptchaValidationException;
 import cn.sinjinsong.skeleton.exception.token.LoginInfoInvalidException;
 import cn.sinjinsong.skeleton.exception.token.UserStatusInvalidException;
-import cn.sinjinsong.skeleton.properties.AuthenticationProperties;
-import cn.sinjinsong.skeleton.domain.dto.user.LoginDTO;
 import cn.sinjinsong.skeleton.security.login.LoginHandler;
 import cn.sinjinsong.skeleton.security.token.TokenManager;
+import cn.sinjinsong.skeleton.security.util.SecurityUtil;
 import cn.sinjinsong.skeleton.security.verification.VerificationManager;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,18 +102,22 @@ public class TokenController {
             throw new LoginInfoInvalidException(loginDTO);
         }
         SecurityContextHolder.getContext().setAuthentication(authentication);
+        //到这里验证成功
+        //如果之前已经登录过，那么清除之前登录的token
+        tokenManager.deleteToken(username);
+        //申请新的token
         String token = tokenManager.createToken(username);
         //验证结束，清除验证码
         verificationManager.deleteVerificationCode(loginDTO.getCaptchaCode());
         return token;
     }
-
+    
     @RequestMapping(method = RequestMethod.DELETE)
     @ApiOperation(value = "登出", response = Void.class, authorizations = {@Authorization("登录权限")})
     @ApiResponses(value = {
             @ApiResponse(code = 401, message = "未登录")
     })
-    public void logout(@RequestHeader(AuthenticationProperties.AUTH_HEADER) String token) {
-        tokenManager.deleteToken(token);
+    public void logout() {
+        tokenManager.deleteToken(SecurityUtil.currentUsername());
     }
 }

@@ -41,7 +41,7 @@ public class TokenManagerImpl implements TokenManager {
      * "alg": "HS256"
      * }
      *
-     * @param username 用户信息
+     * @param username 用户名
      * @return
      */
     @Override
@@ -68,13 +68,13 @@ public class TokenManagerImpl implements TokenManager {
         //生成JWT  
         String token = builder.compact();
         //放入缓存
-        cacheManager.putWithExpireTime(token, username, authenticationProperties.getExpireTime());
+        cacheManager.putWithExpireTime(String.valueOf(username.hashCode()), token, authenticationProperties.getExpireTime());
         return token;
     }
 
     @Override
     public TokenCheckResult checkToken(String token) {
-        if(token == null){
+        if (token == null) {
             return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.NOT_FOUND.toString())).build();
         }
         Claims claims;
@@ -83,20 +83,23 @@ public class TokenManagerImpl implements TokenManager {
                     .setSigningKey(DatatypeConverter.parseBase64Binary(authenticationProperties.getSecretKey()))
                     .parseClaimsJws(token).getBody();
         } catch (ExpiredJwtException e) {
-            System.out.printf("Token过期,%s\n",token);
+            System.out.printf("Token过期,%s\n", token);
             return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.EXPIRED.toString())).build();
         } catch (Exception e) {
             return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.INVALID.toString())).build();
         }
-        String username = cacheManager.get(token, String.class);
-        if (username == null) {
+        String username = claims.getId();
+        String cachedToken = cacheManager.get(String.valueOf(username.hashCode()), String.class);
+        if (cachedToken == null || !cachedToken.equals(token)) {
             return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.INVALID.toString())).build();
         }
         return new TokenCheckResult.TokenCheckResultBuilder().valid().username(username).build();
     }
 
     @Override
-    public void deleteToken(String token) {
-        cacheManager.delete(token);
+    public void deleteToken(String username) {
+        cacheManager.delete(String.valueOf(username.hashCode()));
     }
+
+
 }
