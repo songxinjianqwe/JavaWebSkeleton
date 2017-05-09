@@ -22,7 +22,7 @@ public class AuthenticationProperties {
     public static final String AUTH_HEADER = "Authentication";
     public static final String USER_ID = "id";
     public static final String LOGIN_URL = "/tokens";
-
+    public static final String EXCEPTION_ATTR_NAME = "BaseRESTException";
     public Integer getCaptchaExpireTime() {
         return captchaExpireTime;
     }

@@ -12,7 +12,7 @@ public class RESTExceptionHandler {
 	
 	@ExceptionHandler(BaseRESTException.class)
 	public ResponseEntity<RESTError> handle(BaseRESTException e) {
-		return new ResponseEntity<>(new RESTError(e.getStatus(), e.getCode(), e.getErrors(), ""), e.getStatus());
+		return new ResponseEntity<>(new RESTError(e.getStatus(), e.getCode(), e.getErrors(), e.getMoreInfoURL()), e.getStatus());
 	}
 	
 }

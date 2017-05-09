@@ -15,7 +15,7 @@ public class BaseRESTException extends RuntimeException {
     private HttpStatus status;
     private int code;
     private List<RESTFieldError> error;
-    private String moreInfoURL;
+    private String moreInfoURL = "";
 
     public BaseRESTException() {
     }
@@ -71,4 +71,6 @@ public class BaseRESTException extends RuntimeException {
     public void setMoreInfoURL(String moreInfoURL) {
         this.moreInfoURL = moreInfoURL;
     }
+    
+    
 }

@@ -1,5 +1,7 @@
 package cn.sinjinsong.skeleton.security.token;
 
+import cn.sinjinsong.skeleton.security.domain.TokenCheckResult;
+
 /**
  * Created by SinjinSong on 2017/4/27.
  */
@@ -16,7 +18,7 @@ public interface TokenManager {
      * @param token
      * @return
      */
-    String checkToken(String token);
+    TokenCheckResult checkToken(String token);
     
     /**
      * 当登出后，删除token

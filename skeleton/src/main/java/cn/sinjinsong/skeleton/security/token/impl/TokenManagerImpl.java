@@ -3,6 +3,7 @@ package cn.sinjinsong.skeleton.security.token.impl;
 import cn.sinjinsong.common.cache.CacheManager;
 import cn.sinjinsong.skeleton.exception.token.TokenStateInvalidException;
 import cn.sinjinsong.skeleton.properties.AuthenticationProperties;
+import cn.sinjinsong.skeleton.security.domain.TokenCheckResult;
 import cn.sinjinsong.skeleton.security.token.TokenManager;
 import cn.sinjinsong.skeleton.security.token.TokenState;
 import io.jsonwebtoken.*;
@@ -23,7 +24,7 @@ public class TokenManagerImpl implements TokenManager {
     private CacheManager cacheManager;
     @Autowired
     private AuthenticationProperties authenticationProperties;
-    
+
     /**
      * 一个JWT实际上就是一个字符串，它由三部分组成，头部、载荷与签名。
      * iss: 该JWT的签发者，是否使用是可选的；
@@ -33,7 +34,7 @@ public class TokenManagerImpl implements TokenManager {
      * iat(issued at): 在什么时候签发的(UNIX时间)，是否使用是可选的；
      * 其他还有：
      * nbf (Not Before)：如果当前时间在nbf里的时间之前，则Token不被接受；一般都会留一些余地，比如几分钟；，是否使用是可选的；
-     * 
+     * <p>
      * JWT还需要一个头部，头部用于描述关于该JWT的最基本的信息，例如其类型以及签名所用的算法等。这也可以被表示成一个JSON对象。
      * {
      * "typ": "JWT",
@@ -53,7 +54,7 @@ public class TokenManagerImpl implements TokenManager {
         Key signingKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
         long nowMillis = System.currentTimeMillis();
         Date now = new Date(nowMillis);
-        
+
         //添加构成JWT的参数  
         JwtBuilder builder = Jwts.builder().setHeaderParam("typ", "JWT")
                 .setId(username)
@@ -61,7 +62,7 @@ public class TokenManagerImpl implements TokenManager {
                 .signWith(signatureAlgorithm, signingKey);
 
         //添加Token过期时间  
-        long expireTime = System.currentTimeMillis() + authenticationProperties.getExpireTime()*1000;
+        long expireTime = System.currentTimeMillis() + authenticationProperties.getExpireTime() * 1000;
         Date expireDateTime = new Date(expireTime);
         builder.setExpiration(expireDateTime);
         //生成JWT  
@@ -72,23 +73,25 @@ public class TokenManagerImpl implements TokenManager {
     }
 
     @Override
-    public String checkToken(String token) {
+    public TokenCheckResult checkToken(String token) {
+        if(token == null){
+            return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.NOT_FOUND.toString())).build();
+        }
         Claims claims;
         try {
             claims = Jwts.parser()
                     .setSigningKey(DatatypeConverter.parseBase64Binary(authenticationProperties.getSecretKey()))
                     .parseClaimsJws(token).getBody();
         } catch (ExpiredJwtException e) {
-            throw new TokenStateInvalidException(TokenState.EXPIRE.toString());
-        } catch(Exception e){
-            throw new TokenStateInvalidException(TokenState.INVALID.toString());
+            return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.EXPIRED.toString())).build();
+        } catch (Exception e) {
+            return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.INVALID.toString())).build();
         }
-        
         String username = cacheManager.get(token, String.class);
-        if(username == null){
-            throw new TokenStateInvalidException(TokenState.INVALID.toString());
+        if (username == null) {
+            return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.INVALID.toString())).build();
         }
-        return username;
+        return new TokenCheckResult.TokenCheckResultBuilder().valid().username(username).build();
     }
 
     @Override

@@ -8,9 +8,9 @@ import java.util.Map;
  */
 public enum TokenState {
     VALID,
-    EXPIRE,
-    INVALID;
-
+    EXPIRED,
+    INVALID,
+    NOT_FOUND;
     private static final Map<String, TokenState> stringToEnum = new HashMap<>();
 
     static {
