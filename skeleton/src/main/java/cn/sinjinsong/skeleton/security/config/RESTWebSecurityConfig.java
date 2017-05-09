@@ -66,6 +66,26 @@ public class RESTWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 //添加JWTFilter
                 .authorizeRequests()
+                //允许访问静态资源
+                .antMatchers(
+                        HttpMethod.GET,
+                        "/",
+                        "/*.html",
+                        "/favicon.ico",
+                        "/**/*.html",
+                        "/**/*.css",
+                        "/**/*.js").permitAll()
+                //允许访问swagger
+                .antMatchers(
+                        "/v2/api-docs",
+                        "/configuration/ui",
+                        "/swagger-resources",
+                        "/configuration/security",
+                        "/swagger-ui.html",
+                        "/webjars/**",
+                        "/swagger-resources/configuration/ui",
+                        "/swagge‌​r-ui.html",
+                        "/swagger-resources/configuration/security").permitAll()
                 //获取图片验证码
                 .antMatchers(HttpMethod.GET, "/captchas").permitAll()
                 //检查用户名是否重复

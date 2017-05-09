@@ -2,96 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7c0b10c-93db-47bc-8907-67ab325b5b74" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/exception/mail/MailReceiverNotFoundException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/util/SecurityUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/dao/mail/MailDOMapperTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/service/mail/MailServiceTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/BaseSpringTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/controller/mail/MailController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/controller/user/CaptchaController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/controller/user/FileController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/controller/user/TokenController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/controller/user/UserController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/controller/user/handler/QueryUserHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/controller/user/handler/impl/QueryUserByEmailHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/controller/user/handler/impl/QueryUserByIdHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/controller/user/handler/impl/QueryUserByPhoneHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/controller/user/handler/impl/QueryUserByUsernameHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/dao/mail/MailDOMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/dao/mail/MailTextDOMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/dao/user/RoleDOMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/dao/user/UserDOMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/domain/dto/mail/MailDTO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/domain/dto/user/LoginDTO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/domain/entity/mail/MailDO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/domain/entity/mail/MailTextDO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/domain/entity/user/RoleDO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/domain/entity/user/UserDO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/enumeration/conversion/MailStatusTypeHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/enumeration/conversion/UserStatusTypeHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/enumeration/mail/MailStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/enumeration/mail/QueryMailTarget.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/enumeration/mail/SendMode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/enumeration/user/UserMode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/enumeration/user/UserStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/handler/EmailExceptionHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/mail/MailStatusNotFoundException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/mail/MailTargetNotFoundException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/token/ActivationCodeValidationException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/token/CaptchaValidationException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/token/LoginInfoInvalidException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/token/TokenStateInvalidException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/token/UserStatusInvalidException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/user/AccessDeniedException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/user/QueryUserModeNotFoundException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/user/UserNotFoundException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/exception/user/UsernameExistedException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/properties/AuthenticationProperties.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/properties/ThirdPartyProperties.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/scheduler/Scheduler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/coder/AESUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/coder/DESUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/config/RESTWebSecurityConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/domain/JWTUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/domain/ThirdPartyUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/domain/TokenCheckResult$TokenCheckResultBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/domain/TokenCheckResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/endpoint/JWTAuthenticationEntryPoint.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/endpoint/RESTAccessDeniedHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/filter/JWTAuthenticationTokenFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/https/HTTPSCoder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/https/HTTPSPKCSCoder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/login/LoginHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/login/impl/EmailLoginHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/login/impl/PhoneLoginHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/login/impl/UsernameLoginHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/oauth/ThirdPartyLoginHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/token/TokenManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/token/TokenState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/verification/VerificationManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/security/verification/impl/VerificationManagerImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/service/email/EmailService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/service/email/impl/EmailServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/service/mail/MailService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/service/mail/impl/MailServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/service/user/UserService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/service/user/impl/UserDetailsServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/skeleton/target/classes/cn/sinjinsong/skeleton/service/user/impl/UserServiceImpl.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/README.md" afterPath="$PROJECT_DIR$/skeleton/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/domain/dto/mail/MailDTO.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/domain/dto/mail/MailDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/TokenManager.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/TokenManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/mail/impl/MailServiceImpl.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/mail/impl/MailServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/resources/i18n_zh_CN.properties" afterPath="$PROJECT_DIR$/skeleton/src/main/resources/i18n_zh_CN.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/resources/mapper/UserDOMapper.xml" afterPath="$PROJECT_DIR$/skeleton/src/main/resources/mapper/UserDOMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/resources/redis.properties" afterPath="$PROJECT_DIR$/skeleton/src/main/resources/redis.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/resources/spring/spring-web.xml" afterPath="$PROJECT_DIR$/skeleton/src/main/resources/spring/spring-web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/controller/user/UserControllerTest.java" afterPath="$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/controller/user/UserControllerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/config/RESTWebSecurityConfig.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/config/RESTWebSecurityConfig.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -107,11 +21,41 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java">
+      <file leaf-file-name="MailController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
-              <caret line="181" column="5" lean-forward="true" selection-start-line="181" selection-start-column="5" selection-end-line="181" selection-end-column="5" />
+            <state relative-caret-position="936">
+              <caret line="63" column="6" lean-forward="true" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaptchaController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/CaptchaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-264">
+              <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/FileController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-296">
+              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TokenController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="110" column="35" lean-forward="false" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,22 +63,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDetailsServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/user/impl/UserDetailsServiceImpl.java">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="40" column="94" lean-forward="true" selection-start-line="40" selection-start-column="94" selection-end-line="40" selection-end-column="108" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/skeleton/src/main/resources/spring/spring-web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1248">
-              <caret line="52" column="115" lean-forward="false" selection-start-line="52" selection-start-column="76" selection-end-line="52" selection-end-column="115" />
-              <folding />
+            <state relative-caret-position="385">
+              <caret line="180" column="4" lean-forward="false" selection-start-line="180" selection-start-column="4" selection-end-line="180" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -203,7 +139,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/endpoint/AccessDeniedEndPoiintHandler.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/exception/user/AccessDeniedException.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/config/RESTWebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/endpoint/RESTAccessDeniedHandler.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/domain/dto/mail/MailDTO.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/util/SecurityUtil.java" />
@@ -215,15 +150,16 @@
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/mail/impl/MailServiceImpl.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/resources/i18n_zh_CN.properties" />
         <option value="$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/controller/user/UserControllerTest.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/TokenManager.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/resources/redis.properties" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/resources/spring/spring-web.xml" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java" />
         <option value="$PROJECT_DIR$/skeleton/README.md" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/user/impl/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/config/RESTWebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java" />
       </list>
     </option>
   </component>
@@ -521,196 +457,6 @@
               <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -781,6 +527,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1567,7 +1317,7 @@
       <updated>1494255251924</updated>
       <workItem from="1494255255572" duration="4647000" />
       <workItem from="1494286880836" duration="22056000" />
-      <workItem from="1494325800299" duration="9109000" />
+      <workItem from="1494325800299" duration="9924000" />
     </task>
     <servers />
   </component>
@@ -1604,7 +1354,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35812000" />
+    <option name="totallyTimeSpent" value="36627000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -1632,7 +1382,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45838085" sideWeight="0.49791667" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.112884834" sideWeight="0.49791667" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.290625" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
@@ -1714,6 +1464,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1809,14 +1560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/CaptchaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/enumeration/conversion/MailStatusTypeHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1840,14 +1583,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/FileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1933,7 +1668,7 @@
         <state relative-caret-position="264">
           <caret line="12" column="69" lean-forward="false" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1965,14 +1700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="62" column="6" lean-forward="true" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/domain/dto/mail/MailDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-42">
@@ -1986,16 +1713,6 @@
         <state relative-caret-position="168">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="916">
-          <caret line="110" column="35" lean-forward="false" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2041,16 +1758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/config/RESTWebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -2089,21 +1796,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java">
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/user/impl/UserDetailsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="181" column="5" lean-forward="true" selection-start-line="181" selection-start-column="5" selection-end-line="181" selection-end-column="5" />
+        <state relative-caret-position="452">
+          <caret line="41" column="10" lean-forward="true" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/config/RESTWebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="87" column="69" lean-forward="false" selection-start-line="87" selection-start-column="69" selection-end-line="87" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/user/impl/UserDetailsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="40" column="94" lean-forward="true" selection-start-line="40" selection-start-column="94" selection-end-line="40" selection-end-column="108" />
+        <state relative-caret-position="936">
+          <caret line="63" column="6" lean-forward="true" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/CaptchaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264">
+          <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-296">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="110" column="35" lean-forward="false" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="180" column="4" lean-forward="false" selection-start-line="180" selection-start-column="4" selection-end-line="180" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

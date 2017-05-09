@@ -54,7 +54,6 @@ public class UserController {
     
     /**
      * mode 支持id、username、email、手机号
-     * <p>
      * 只有管理员或自己才可以查询某用户的完整信息
      *
      * @param key
@@ -66,7 +65,8 @@ public class UserController {
     @ApiOperation(value = "按某属性查询用户", notes = "属性可以是id或username或email或手机号", response = UserDO.class, authorizations = {@Authorization("登录权限")})
     @ApiResponses(value = {
             @ApiResponse(code = 401, message = "未登录"),
-            @ApiResponse(code = 404, message = "查询模式未找到")
+            @ApiResponse(code = 404, message = "查询模式未找到"),
+            @ApiResponse(code = 403, message = "只有管理员或用户自己能查询自己的用户信息"),
     })
     public UserDO findByKey(@PathVariable("key") @ApiParam(value = "查询关键字", required = true) String key, @RequestParam("mode") @ApiParam(value = "查询模式，可以是id或username或phone或email", required = true) String mode) {
         
@@ -145,7 +145,8 @@ public class UserController {
     @ApiOperation(value = "更新用户信息", response = Void.class, authorizations = {@Authorization("登录权限")})
     @ApiResponses(value = {
             @ApiResponse(code = 401, message = "未登录"),
-            @ApiResponse(code = 404, message = "用户属性校验失败")
+            @ApiResponse(code = 404, message = "用户属性校验失败"),
+            @ApiResponse(code = 403, message = "只有管理员或用户自己能更新用户信息"),
 
     })
     public void updateUser(@RequestBody @Valid @ApiParam(value = "用户信息，用户的用户名、密码、昵称、邮箱不可为空", required = true) UserDO user, BindingResult result) {

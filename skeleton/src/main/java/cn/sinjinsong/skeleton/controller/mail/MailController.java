@@ -59,7 +59,8 @@ public class MailController {
     @PreAuthorize("hasRole('ADMIN') or (hasRole('USER') and #mailDTO.sendMode.toString() != 'BROADCAST' )")
     @ApiOperation(value = "发送站内信，可以单独发送、批量或广播", notes = "如果是单独发送或批量，那么必须指定receivers，并将sendMode置为BATCH；如果是广播，那么无需指定receivers，并将SendMode置为BROADCAST")
     @ApiResponses(value = {
-            @ApiResponse(code = 400, message = "mail对象属性校验失败")
+            @ApiResponse(code = 400, message = "mail对象属性校验失败"),
+            @ApiResponse(code = 403, message = "广播功能仅支持管理员"),
     })
     public void sendMails(@RequestBody @Valid @ApiParam(value = "站内信对象", required = true) MailDTO mailDTO, BindingResult result) {
         if (result.hasErrors()) {
