@@ -30,42 +30,42 @@ public class JWTUser implements UserDetails {
         this.authorities = authorities;
     }
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+    public Long getId() {
+        return id;
     }
 
     @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return this.authorities;
+    }
+    
+    @Override
     public String getPassword() {
-        return null;
+        return this.password;
     }
 
     @Override
     public String getUsername() {
-        return null;
+        return this.username;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return this.isAccountNonExpired;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return this.isAccountNonLocked;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return this.isCredentialsNonExpired;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
-    }
-
-    public Long getId() {
-        return id;
+        return this.isEnabled;
     }
 }

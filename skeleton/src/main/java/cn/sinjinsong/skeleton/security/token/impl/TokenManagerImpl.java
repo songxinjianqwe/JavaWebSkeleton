@@ -83,6 +83,7 @@ public class TokenManagerImpl implements TokenManager {
                     .setSigningKey(DatatypeConverter.parseBase64Binary(authenticationProperties.getSecretKey()))
                     .parseClaimsJws(token).getBody();
         } catch (ExpiredJwtException e) {
+            System.out.printf("Token过期,%s\n",token);
             return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.EXPIRED.toString())).build();
         } catch (Exception e) {
             return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.INVALID.toString())).build();

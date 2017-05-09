@@ -101,6 +101,6 @@
         - 登录时要构造UsernamePasswordAuthenticationToken，用户名和密码来自于参数，然后调用AuthenticationManager的authenticate方法，
         它会去调用UserDetailsService的loadFromUsername，参数是token的username，然后比对password，检查userDetails的一些状态。
         如果一切正常，那么会返回Authentication。返回的Authentication的用户名和密码是正确的用户名和密码，并且还放入了之前查询出的Roles。
-        调用getDetails可以得到之前听过UserDetailsService查询出的UserDetails
-        
+        调用getAuthentication然后调用getPrinciple可以得到之前听过UserDetailsService查询出的UserDetails
+   - 在Controller中使用@PreAuthorize等注解需要在spring-web配置文件中扫描security包下的类        
 

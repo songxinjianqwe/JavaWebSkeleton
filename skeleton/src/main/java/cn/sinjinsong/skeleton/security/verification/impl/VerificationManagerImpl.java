@@ -20,7 +20,6 @@ class VerificationManagerImpl implements VerificationManager {
 
     @Override
     public boolean checkVerificationCode(String key, String value) {
-        System.out.println(key+"   "+value);
         String realValue = cacheManager.get(key, String.class);
         if(realValue == null){
             return false;

@@ -69,6 +69,18 @@ public class UserServiceImpl implements UserService {
     public void update(UserDO userDO) {
         userDOMapper.updateByPrimaryKeySelective(userDO);
     }
+    
+    @Override
+    @Transactional
+    @CacheEvict(value = "UserDO",allEntries = true)
+    public void resetPassword(Long id,String newPassword) {
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        UserDO userDO = new UserDO();
+        userDO.setId(id);
+        userDO.setPassword(passwordEncoder.encode(newPassword));
+        userDOMapper.updateByPrimaryKeySelective(userDO);
+    }
+    
 
     @Override
     public PageInfo<UserDO> findAll(int pageNum, int pageSize) {

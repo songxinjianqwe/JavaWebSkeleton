@@ -8,7 +8,7 @@ import cn.sinjinsong.skeleton.exception.token.CaptchaValidationException;
 import cn.sinjinsong.skeleton.exception.token.LoginInfoInvalidException;
 import cn.sinjinsong.skeleton.exception.token.UserStatusInvalidException;
 import cn.sinjinsong.skeleton.properties.AuthenticationProperties;
-import cn.sinjinsong.skeleton.security.domain.LoginDTO;
+import cn.sinjinsong.skeleton.domain.dto.user.LoginDTO;
 import cn.sinjinsong.skeleton.security.login.LoginHandler;
 import cn.sinjinsong.skeleton.security.token.TokenManager;
 import cn.sinjinsong.skeleton.security.verification.VerificationManager;
@@ -76,20 +76,20 @@ public class TokenController {
             verificationManager.deleteVerificationCode(loginDTO.getCaptchaCode());
             throw new CaptchaValidationException(loginDTO.getCaptchaValue());
         }
-
         //登录信息不完整
         if (result.hasErrors()) {
             throw new ValidationException(result.getFieldErrors());
         }
+
         LoginHandler loginHandler = SpringContextUtil.getBean("LoginHandler", loginDTO.getUserMode().toString().toLowerCase());
-        System.out.println(loginDTO);
         //下面进行校验
         UserDO user = loginHandler.handle(loginDTO);
+        System.out.println(user);
         String username = null;
         if (user != null) {
             username = user.getUsername();
         }
-
+        
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username, loginDTO.getPassword());
         Authentication authentication;
         try {
@@ -114,7 +114,6 @@ public class TokenController {
             @ApiResponse(code = 401, message = "未登录")
     })
     public void logout(@RequestHeader(AuthenticationProperties.AUTH_HEADER) String token) {
-        SecurityContextHolder.getContext().setAuthentication(null);
         tokenManager.deleteToken(token);
     }
 }

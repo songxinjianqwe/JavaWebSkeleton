@@ -3,7 +3,7 @@ package cn.sinjinsong.skeleton.exception.token;
 import cn.sinjinsong.common.exception.annotation.RESTField;
 import cn.sinjinsong.common.exception.annotation.RESTResponseStatus;
 import cn.sinjinsong.common.exception.base.BaseRESTException;
-import cn.sinjinsong.skeleton.security.domain.LoginDTO;
+import cn.sinjinsong.skeleton.domain.dto.user.LoginDTO;
 import org.springframework.http.HttpStatus;
 
 /**

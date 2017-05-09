@@ -30,7 +30,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         } else if (user.getRoles().isEmpty()) {
             throw new UsernameNotFoundException(username);
         }
-        
         return new JWTUser(
                 user.getId(),
                 user.getUsername(),

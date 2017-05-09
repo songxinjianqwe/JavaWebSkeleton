@@ -19,8 +19,7 @@
             base-package=
                     "cn.sinjinsong.skeleton.service,
                     cn.sinjinsong.skeleton.scheduler,
-                    cn.sinjinsong.skeleton.properties,
-                    cn.sinjinsong.skeleton.security"/>
+                    cn.sinjinsong.skeleton.properties"/>
 
     <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
         <property name="locations">

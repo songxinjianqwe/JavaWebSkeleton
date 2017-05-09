@@ -13,6 +13,7 @@ import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.*;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,7 +29,7 @@ import javax.validation.Valid;
 public class MailController {
     @Autowired
     private MailService mailService;
-
+    
     @RequestMapping(value = "/{targetId}", method = RequestMethod.GET)
     @ApiOperation(value = "按照发信人或收信人的id以及发信状态", notes = "target是指定按照收信人还是发信人查询，可选值是sender和receiver；如果是按照收信人查询，那么必须指定mail_status，可选值为ALL、NOT_VIEWED、VIEWED；如果是按照发信人查询，则不需要给出该参数", response = PageInfo.class)
     @ApiResponses(value = {
@@ -53,6 +54,7 @@ public class MailController {
     }
     
     @RequestMapping(method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ADMIN') or (hasRole('USER') and #mailDTO.sendMode != SendMode.BROADCAST)")
     @ApiOperation(value = "发送站内信，可以单独发送、批量或广播", notes = "如果是单独发送或批量，那么必须指定receivers，并将sendMode置为BATCH；如果是广播，那么无需指定receivers，并将SendMode置为BROADCAST")
     @ApiResponses(value = {
             @ApiResponse(code = 400, message = "mail对象属性校验失败")

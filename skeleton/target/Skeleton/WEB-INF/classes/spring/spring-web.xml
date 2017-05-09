@@ -6,22 +6,23 @@
        xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
-    <context:component-scan base-package="cn.sinjinsong.skeleton.controller">
+    <context:component-scan base-package="cn.sinjinsong.skeleton.controller,
+                                           cn.sinjinsong.skeleton.security">
     </context:component-scan>
     
     <context:component-scan base-package="cn.sinjinsong.common.controller.advice">
     </context:component-scan>
- 
+
     <bean id="conversionService"
           class="org.springframework.context.support.ConversionServiceFactoryBean">
         <property name="converters">
             <set>
-                <bean class="cn.sinjinsong.common.enumeration.conversion.StringToEnumConverterFactory"/>
+                <bean class="cn.sinjinsong.common.enumeration.conversion.StringToEnumConverterFactory"></bean>
             </set>
         </property>
     </bean>
-    
-    
+
+
     <!-- 解决静态资源访问问题 -->
     <mvc:default-servlet-handler/>
     <mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>

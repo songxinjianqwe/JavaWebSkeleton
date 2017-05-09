@@ -4,7 +4,7 @@ import cn.sinjinsong.common.exception.ValidationException;
 import cn.sinjinsong.common.util.FileUtil;
 import cn.sinjinsong.common.util.SpringContextUtil;
 import cn.sinjinsong.common.util.UUIDUtil;
-import cn.sinjinsong.skeleton.controller.user.handler.user.query.QueryUserHandler;
+import cn.sinjinsong.skeleton.controller.user.handler.QueryUserHandler;
 import cn.sinjinsong.skeleton.domain.entity.user.UserDO;
 import cn.sinjinsong.skeleton.enumeration.user.UserStatus;
 import cn.sinjinsong.skeleton.exception.token.ActivationCodeValidationException;
@@ -22,6 +22,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -58,13 +60,14 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/query/{key}", method = RequestMethod.GET)
-    @PostAuthorize("hasRole('ADMIN') or #returnObject.username == principal.username")
+    @PostAuthorize("hasRole('ADMIN') or (returnObject.username ==  principal.username)")
     @ApiOperation(value = "按某属性查询用户", notes = "属性可以是id或username或email或手机号", response = UserDO.class, authorizations = {@Authorization("登录权限")})
     @ApiResponses(value = {
             @ApiResponse(code = 401, message = "未登录"),
             @ApiResponse(code = 404, message = "查询模式未找到")
     })
     public UserDO findByKey(@PathVariable("key") @ApiParam(value = "查询关键字", required = true) String key, @RequestParam("mode") @ApiParam(value = "查询模式，可以是id或username或phone或email", required = true) String mode) {
+        
         QueryUserHandler handler = SpringContextUtil.getBean("QueryUserHandler", StringUtils.lowerCase(mode));
         if (handler == null) {
             throw new QueryUserModeNotFoundException(mode);
@@ -108,19 +111,18 @@ public class UserController {
     }
 
 
-    @RequestMapping(value = "/avatar", method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}/avatar", method = RequestMethod.GET)
     @ApiOperation(value = "获取用户的头像图片", response = Byte.class)
     @ApiResponses(value = {
             @ApiResponse(code = 404, message = "文件不存在"),
             @ApiResponse(code = 400, message = "文件传输失败")
     })
-    public void getUserAvatar(@RequestParam("id") Long id, HttpServletRequest request, HttpServletResponse response) {
+    public void getUserAvatar(@PathVariable("id") Long id, HttpServletRequest request, HttpServletResponse response) {
         String relativePath = service.findAvatarById(id);
         FileUtil.download(relativePath, request.getServletContext(), response);
     }
 
     @RequestMapping(value = "/{id}/activation", method = RequestMethod.GET)
-    @PreAuthorize("permitAll()")
     @ApiOperation(value = "用户激活，前置条件是用户已注册且在24小时内", response = Void.class)
     @ApiResponses(value = {
             @ApiResponse(code = 401, message = "未注册或超时或激活码错误")
@@ -177,11 +179,7 @@ public class UserController {
             throw new ActivationCodeValidationException(forgetPasswordCode);
         }
         verificationManager.deleteVerificationCode(forgetPasswordCode);
-        UserDO userDO = new UserDO();
-        userDO.setId(id);
-        userDO.setPassword(password);
-        //TODO 对密码进行加密
-        service.update(userDO);
+        service.resetPassword(id,password);
     }
 
     
@@ -194,12 +192,14 @@ public class UserController {
         }
         return true;
     }
-
+    
     @RequestMapping(method = RequestMethod.GET)
     @PreAuthorize("hasRole('ADMIN')")
     @ApiOperation(value = "分页查询用户信息", response = PageInfo.class, authorizations = {@Authorization("登录权限")})
     @ApiResponses(value = {@ApiResponse(code = 401, message = "未登录")})
     public PageInfo<UserDO> findAllUsers(@RequestParam("pageNum") @ApiParam(value = "页码，从1开始", defaultValue = "1") Integer pageNum, @RequestParam("pageSize") @ApiParam(value = "每页记录数", defaultValue = "5") Integer pageSize) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        System.out.println("Authentication"+authentication.getAuthorities());    
         return service.findAll(pageNum, pageSize);
     }
 }

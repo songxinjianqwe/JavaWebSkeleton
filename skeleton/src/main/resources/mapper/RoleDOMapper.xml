@@ -103,6 +103,6 @@
     </select>
     
     <insert id="insertUserRole" >
-        insert into user_role(user_id,role_id) values(#{userId},#{roleId})
+        insert into user_role(user,role) values(#{userId},#{roleId})
     </insert>
 </mapper>

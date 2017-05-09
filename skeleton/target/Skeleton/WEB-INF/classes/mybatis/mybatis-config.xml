@@ -8,7 +8,7 @@
         <!--缓存 -->
         <setting name="cacheEnabled" value="false"/>
         <!--延迟加载-->
-        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="lazyLoadingEnabled" value="false"/>
         <!--侵入延迟加载， 当启用时,有延迟加载属性的对象在被调用时将会完全加载任意属性。否则,每种属性将会按需要加载。-->
         <setting name="aggressiveLazyLoading" value="false"/>
         <setting name="localCacheScope" value="STATEMENT"/>

@@ -1,7 +1,7 @@
 package cn.sinjinsong.skeleton.security.login.impl;
 
 import cn.sinjinsong.skeleton.domain.entity.user.UserDO;
-import cn.sinjinsong.skeleton.security.domain.LoginDTO;
+import cn.sinjinsong.skeleton.domain.dto.user.LoginDTO;
 import cn.sinjinsong.skeleton.security.login.LoginHandler;
 import cn.sinjinsong.skeleton.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
