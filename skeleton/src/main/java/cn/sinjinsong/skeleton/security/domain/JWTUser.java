@@ -16,7 +16,7 @@ public class JWTUser implements UserDetails {
     private boolean isAccountNonLocked;
     private boolean isCredentialsNonExpired;
     private boolean isEnabled;
-
+    
     private Collection<? extends GrantedAuthority> authorities;
     
     public JWTUser(Long id,String username, String password, boolean isEnabled, boolean isAccountNonLocked, boolean isAccountNonExpired, boolean isCredentialsNonExpired, Collection<? extends GrantedAuthority> authorities) {

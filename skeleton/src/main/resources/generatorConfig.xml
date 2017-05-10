@@ -44,8 +44,8 @@
             <property name="rootInterface" value=""/>
         </javaClientGenerator>
 
-        <table tableName="roles"
-               domainObjectName="RoleDO"
+        <table tableName="resource"
+               domainObjectName="ResourceDO"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
