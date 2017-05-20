@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Skeleton.iml" filepath="$PROJECT_DIR$/Skeleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-util/common-util.iml" filepath="$PROJECT_DIR$/common-util/common-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/skeleton/skeleton.iml" filepath="$PROJECT_DIR$/skeleton/skeleton.iml" />
+    </modules>
+  </component>
+</project>

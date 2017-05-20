@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/tx
+	   http://www.springframework.org/schema/tx/spring-tx.xsd
+	   http://www.springframework.org/schema/context 
+	   http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+    <context:component-scan base-package="cn.sinjinsong.skeleton.dao"/>
+
+    <context:property-placeholder location="classpath:jdbc.properties" ignore-unresolvable="true"/>
+    
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url"
+                  value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="maxWait" value="${jdbc.maxWait}"/>
+        <property name="filters" value="${druid.filters}"/>
+    </bean>
+
+    <!-- MyBatis的Session工厂 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 配置mybatis配置文件的位置 -->
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
+        <!-- 自动扫描mapping.xml文件 -->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+        <!-- 注意其他配置 -->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <!--使用key=value的方式配置参数，一行配置一个 -->
+                        <value>
+                            pageSizeZero=true
+                            reasonable=true
+                            supportMethodsArguments=true
+                            autoRuntimeDialect=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+    </bean>
+
+    <!-- 配置扫描Mapper接口的包路径 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="cn.sinjinsong.skeleton.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+    </bean>
+    
+    <!--事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <!--配置基于注解的声明式事务,默认使用注解来管理事务行为-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    
+</beans>

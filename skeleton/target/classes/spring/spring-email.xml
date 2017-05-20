@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+    <!-- 资源文件地址 -->
+    <context:property-placeholder location="classpath:email.properties" ignore-unresolvable="true"/>
+    
+    <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <!-- SMTP发送邮件的服务器的IP和端口 -->
+        <property name="host" value="${mail.host}"/>
+        <property name="port" value="${mail.port}"/>
+        <!-- 登陆SMTP邮件发送服务器的用户名和密码 -->
+        <property name="username" value="${mail.username}"/>
+        <property name="password" value="${mail.password}"/>
+        <property name="defaultEncoding" value="${mail.defaultEncoding}"></property>
+        <!-- 获得邮件会话属性,验证登录邮件服务器是否成功-->
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+                <prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop>
+                <prop key="prop">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="emailTemplateResolver" class="org.thymeleaf.templateresolver.ClassLoaderTemplateResolver">
+        <!--配置文件的父目录名-->
+        <property name="prefix" value="emailTemplates/"/>
+        <property name="templateMode" value="HTML5"/>
+        <property name="order" value="1"/>
+        <property name="characterEncoding" value="UTF-8"/>
+        <property name="cacheable" value="true"/>
+    </bean>
+
+    <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+        <property name="templateResolvers">
+            <set>
+                <ref bean="emailTemplateResolver"/>
+            </set>
+        </property>
+    </bean>
+    <bean id="propertyConfigurer" class="cn.sinjinsong.common.util.PropertyConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:emailSubject.properties</value>
+            </list>
+        </property>
+    </bean>
+</beans>

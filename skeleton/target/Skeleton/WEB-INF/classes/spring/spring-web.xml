@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+    <context:component-scan base-package="cn.sinjinsong.skeleton.controller,
+                                           cn.sinjinsong.skeleton.security">
+    </context:component-scan>
+
+    <context:component-scan base-package="cn.sinjinsong.common.controller.advice">
+    </context:component-scan>
+
+    <bean id="conversionService"
+          class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="cn.sinjinsong.common.enumeration.conversion.StringToEnumConverterFactory"></bean>
+            </set>
+        </property>
+    </bean>
+
+
+    <!-- 解决静态资源访问问题 -->
+    <mvc:default-servlet-handler/>
+    <mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>
+
+    <!--配置JSP　显示ViewResolver-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <mvc:interceptors>
+        <!-- 配置自定义拦截器 -->
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
+    </mvc:interceptors>
+
+    <!-- 配置文件上传解析器 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <property name="maxUploadSizePerFile" value="1048576"></property><!-- 1024*1024 -->
+        <property name="maxUploadSize" value="5242880"></property><!-- 5*1024*1024 -->
+        <property name="maxInMemorySize" value="1048576"></property>
+    </bean>
+
+    <!--Spring Security 的@AuthenticationPrincipal支持处理器，必须加-->
+    <mvc:annotation-driven>
+        <mvc:argument-resolvers>
+            <bean class="org.springframework.security.web.method.annotation.AuthenticationPrincipalArgumentResolver"/>
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
+    
+</beans>
