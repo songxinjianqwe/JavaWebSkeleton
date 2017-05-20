@@ -1,4 +1,4 @@
-package me.newsong.util;
+package cn.sinjinsong.common.util;
 
 import java.sql.Timestamp;
 import java.text.ParseException;

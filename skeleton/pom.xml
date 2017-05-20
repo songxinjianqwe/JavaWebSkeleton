@@ -10,7 +10,7 @@
     <packaging>war</packaging>
     <name>skeleton Maven Webapp</name>
     <url>http://maven.apache.org</url>
-    
+
     <dependencies>
         <dependency>
             <groupId>cn.sinjinsong</groupId>
@@ -204,6 +204,10 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
     <build>
