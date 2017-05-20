@@ -44,7 +44,7 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("JavaWeb项目骨架")
-                .description("集成了SpringMVC、Spring、MyBaits、MyBatis Generator、MyBatis PageHelper、Druid、Maven、JWT、Spring Security、JavaMail、Thymeleaf(emailTemplate)、RestTemplate、FileUpload、Spring Scheduler、Hibernate Validator、Redis、Spring Async、Spring Cache、Swagger、Spring Test、(WebSocket、MockMvc、RabbitMQ、Netty、OAUTH、Payment)，REST风格的接口的Web项目")
+                .description("集成了SpringMVC、Spring、MyBaits、MyBatis Generator、MyBatis PageHelper、Druid、Lombok、JWT、Spring Security、JavaMail、Thymeleaf(emailTemplate)、RestTemplate、FileUpload、Spring Scheduler、Hibernate Validator、Redis、Spring Async、Spring Cache、Swagger、Spring Test、(WebSocket、MockMvc、RabbitMQ、Netty、OAUTH、Payment)，REST风格的接口的Web项目")
                 .termsOfServiceUrl("https://github.com/songxinjianqwe")
                 .contact(new Contact("SinjinSong", "https://github.com/songxinjianqwe", "151070063@smail.nju.edu.cn"))
                 .version("0.1")
