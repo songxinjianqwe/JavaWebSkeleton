@@ -17,6 +17,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.time.LocalDate;
 
 public final class FileUtil {
@@ -72,6 +76,13 @@ public final class FileUtil {
             throw new FileDownloadException(file.getName());
         }
     }
-
+    
+    public static void saveFile(String path, byte[] buf) throws IOException {
+        FileChannel outChannel = FileChannel.open(Paths.get(path),
+                StandardOpenOption.READ, StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+        MappedByteBuffer outMappedBuf = outChannel.map(FileChannel.MapMode.READ_WRITE, 0, buf.length);
+        outMappedBuf.put(buf);
+        outChannel.close();
+    }
 
 }

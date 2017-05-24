@@ -8,12 +8,12 @@
     <artifactId>Skeleton</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    
+
     <modules>
         <module>common-util</module>
         <module>skeleton</module>
     </modules>
-    
+
     <properties>
         <!-- spring版本号 -->
         <spring.version>4.3.7.RELEASE</spring.version>
@@ -23,10 +23,10 @@
         <slf4j.version>1.7.25</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
         <thymeleaf.version>3.0.5.RELEASE</thymeleaf.version>
-        <shiro.version>1.3.2</shiro.version>
         <security.version>4.2.2.RELEASE</security.version>
+        <protostuff.version>1.5.2</protostuff.version>
     </properties>
-    
+
     <!--dependencyManagement只会影响现有依赖的配置，但不会引入依赖。
         将所有涉及到的依赖都放到parent中
         子模块需要使用时，在自己的pom中只需要写依赖的groupId和artifactId即可
@@ -329,9 +329,24 @@
                 <artifactId>lombok</artifactId>
                 <version>1.16.16</version>
             </dependency>
+            <dependency>
+                <groupId>io.protostuff</groupId>
+                <artifactId>protostuff-core</artifactId>
+                <version>${protostuff.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.protostuff</groupId>
+                <artifactId>protostuff-runtime</artifactId>
+                <version>${protostuff.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5.3</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <build>
         <plugins>
             <plugin>

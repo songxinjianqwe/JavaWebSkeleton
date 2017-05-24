@@ -10,6 +10,9 @@
           <element id="archive" name="common-util-1.0-SNAPSHOT.jar">
             <element id="module-output" name="common-util" />
           </element>
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4.6" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.8" />
           <element id="library" level="project" name="Maven: junit:junit:4.12" />
           <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
           <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
@@ -89,6 +92,10 @@
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.2.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.2.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.16" />
+          <element id="library" level="project" name="Maven: io.protostuff:protostuff-core:1.5.2" />
+          <element id="library" level="project" name="Maven: io.protostuff:protostuff-api:1.5.2" />
+          <element id="library" level="project" name="Maven: io.protostuff:protostuff-runtime:1.5.2" />
+          <element id="library" level="project" name="Maven: io.protostuff:protostuff-collectionschema:1.5.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
