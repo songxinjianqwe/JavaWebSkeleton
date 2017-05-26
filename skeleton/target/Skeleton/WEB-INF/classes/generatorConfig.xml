@@ -28,7 +28,7 @@
             <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
             <property name="enableSubPackages" value="false"/>
             <!-- 建立的Model对象是否 不可改变  如果为true，那么生成的Model对象不会有 setter方法，只有构造方法 -->
-            <property name="immutable" value="false"/>
+            <property name="immutable" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
         
@@ -44,8 +44,8 @@
             <property name="rootInterface" value=""/>
         </javaClientGenerator>
 
-        <table tableName="roles"
-               domainObjectName="RoleDO"
+        <table tableName="resource"
+               domainObjectName="ResourceDO"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"

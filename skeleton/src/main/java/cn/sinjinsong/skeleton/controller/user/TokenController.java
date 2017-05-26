@@ -13,6 +13,7 @@ import cn.sinjinsong.skeleton.security.token.TokenManager;
 import cn.sinjinsong.skeleton.security.util.SecurityUtil;
 import cn.sinjinsong.skeleton.security.verification.VerificationManager;
 import io.swagger.annotations.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.DisabledException;
@@ -34,6 +35,7 @@ import javax.validation.Valid;
 @RequestMapping("/tokens")
 @RestController
 @Api(value = "tokens", description = "用户登录,toke")
+@Slf4j
 public class TokenController {
     @Autowired
     private TokenManager tokenManager;
@@ -84,7 +86,7 @@ public class TokenController {
         LoginHandler loginHandler = SpringContextUtil.getBean("LoginHandler", loginDTO.getUserMode().toString().toLowerCase());
         //下面进行校验
         UserDO user = loginHandler.handle(loginDTO);
-        System.out.println(user);
+        log.info("{}",user);
         String username = null;
         if (user != null) {
             username = user.getUsername();

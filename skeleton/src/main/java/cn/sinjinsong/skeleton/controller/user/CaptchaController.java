@@ -7,6 +7,7 @@ import cn.sinjinsong.skeleton.properties.AuthenticationProperties;
 import cn.sinjinsong.skeleton.security.verification.VerificationManager;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,7 @@ import java.io.OutputStream;
 @RequestMapping("/captchas")
 @RestController
 @Api(value = "captchas", description = "图片验证码")
+@Slf4j
 public class CaptchaController {
     @Autowired
     private VerificationManager verificationManager;
@@ -52,9 +54,8 @@ public class CaptchaController {
         response.setHeader("captchaCode", uuid);
         //保存
         verificationManager.createVerificationCode(uuid, captcha.getValue(),authenticationProperties.getCaptchaExpireTime());
-        System.out.println(uuid);
-        System.out.println(captcha.getValue());
-
+        log.info("uuid:{}",uuid);
+        log.info("value:{}",captcha.getValue());
         //返回图片
         OutputStream os;
         try {

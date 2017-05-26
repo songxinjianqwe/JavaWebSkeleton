@@ -18,6 +18,7 @@ import cn.sinjinsong.skeleton.service.email.EmailService;
 import cn.sinjinsong.skeleton.service.user.UserService;
 import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.*;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -42,6 +43,7 @@ import java.util.Map;
 @RequestMapping("/users")
 @RestController
 @Api(value = "users", description = "用户API")
+@Slf4j
 public class UserController {
     @Autowired
     private UserService service;
@@ -89,7 +91,7 @@ public class UserController {
             @ApiResponse(code = 400, message = "用户属性校验失败")
     })
     public void createUser(@RequestBody @Valid @ApiParam(value = "用户信息，用户的用户名、密码、昵称、邮箱不可为空", required = true) UserDO user, BindingResult result) {
-        System.out.println(user);
+        log.info("{}",user);
         if (isUsernameDuplicated(user.getUsername())) {
             throw new UsernameExistedException(user.getUsername());
         } else if (result.hasErrors()) {
@@ -102,7 +104,7 @@ public class UserController {
         service.save(user);
         
         verificationManager.createVerificationCode(activationCode, String.valueOf(user.getId()), authenticationProperties.getActivationCodeExpireTime());
-        System.out.println(user.getEmail() + "  " + user.getId());
+        log.info("{}     {}",user.getEmail(),user.getId());
         //发送邮件
         Map<String, Object> params = new HashMap<>();
         params.put("id", user.getId());
@@ -163,7 +165,7 @@ public class UserController {
         //user 一定不为空
         String forgetPasswordCode = UUIDUtil.uuid();
         verificationManager.createVerificationCode(forgetPasswordCode, String.valueOf(user.getId()), authenticationProperties.getForgetNameExpireTime());
-        System.out.println(user.getEmail() + "  " + user.getId());
+        log.info("{}   {}",user.getEmail(),user.getId());
         //发送邮件
         Map<String, Object> params = new HashMap<>();
         params.put("id", user.getId());
@@ -210,7 +212,7 @@ public class UserController {
     @ApiResponses(value = {@ApiResponse(code = 401, message = "未登录")})
     public PageInfo<UserDO> findAllUsers(@RequestParam("pageNum") @ApiParam(value = "页码，从1开始", defaultValue = "1") Integer pageNum, @RequestParam("pageSize") @ApiParam(value = "每页记录数", defaultValue = "5") Integer pageSize) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        System.out.println("Authentication"+authentication.getAuthorities());    
+        log.info("Authentication:{}",authentication.getAuthorities());
         return service.findAll(pageNum, pageSize);
     }
 }

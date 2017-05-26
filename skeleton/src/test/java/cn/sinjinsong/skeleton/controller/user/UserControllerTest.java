@@ -36,6 +36,7 @@ public class UserControllerTest extends BaseSpringTest{
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String password = passwordEncoder.encode("user1");
         System.out.println(password);
+        
     }
 
     @Test

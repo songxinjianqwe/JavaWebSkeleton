@@ -2,24 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7c0b10c-93db-47bc-8907-67ab325b5b74" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_protostuff_protostuff_api_1_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_protostuff_protostuff_collectionschema_1_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_protostuff_protostuff_core_1_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_protostuff_protostuff_runtime_1_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/client/HttpClientManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/ProtoStuffUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_25.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/properties/CharsetProperties.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common-util/target/classes/cn/sinjinsong/common/config/SwaggerConfig.class" afterPath="$PROJECT_DIR$/common-util/target/classes/cn/sinjinsong/common/config/SwaggerConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common-util/target/classes/cn/sinjinsong/common/enumeration/conversion/StringToEnumConverterFactory$StringToEnum.class" afterPath="$PROJECT_DIR$/common-util/target/classes/cn/sinjinsong/common/enumeration/conversion/StringToEnumConverterFactory$StringToEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common-util/target/classes/cn/sinjinsong/common/enumeration/conversion/StringToEnumConverterFactory.class" afterPath="$PROJECT_DIR$/common-util/target/classes/cn/sinjinsong/common/enumeration/conversion/StringToEnumConverterFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common-util/target/classes/cn/sinjinsong/common/util/FileUtil.class" afterPath="$PROJECT_DIR$/common-util/target/classes/cn/sinjinsong/common/util/FileUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/controller/mail/MailController.class" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/controller/mail/MailController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/controller/user/CaptchaController.class" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/controller/user/CaptchaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/controller/user/TokenController.class" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/controller/user/TokenController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/controller/user/UserController.class" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/controller/user/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/dto/mail/MailDTO.class" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/dto/mail/MailDTO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/dto/user/LoginDTO.class" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/dto/user/LoginDTO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/entity/mail/MailDO.class" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/entity/mail/MailDO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/entity/mail/MailTextDO.class" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/entity/mail/MailTextDO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/entity/user/RoleDO.class" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/entity/user/RoleDO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/entity/user/UserDO.class" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/domain/entity/user/UserDO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.class" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/lib/common-util-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/lib/common-util-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/skeleton_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/skeleton_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common-util/common-util.iml" afterPath="$PROJECT_DIR$/common-util/common-util.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common-util/pom.xml" afterPath="$PROJECT_DIR$/common-util/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/DateTimeUtil.java" afterPath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/DateTimeUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/cache/impl/RedisCacheManagerImpl.java" afterPath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/cache/impl/RedisCacheManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/enumeration/conversion/StringToEnumConverterFactory.java" afterPath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/enumeration/conversion/StringToEnumConverterFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/FileUtil.java" afterPath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/FileUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/SpringContextUtil.java" afterPath="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/SpringContextUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/pom.xml" afterPath="$PROJECT_DIR$/skeleton/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/skeleton.iml" afterPath="$PROJECT_DIR$/skeleton/skeleton.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/CaptchaController.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/CaptchaController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/endpoint/JWTAuthenticationEntryPoint.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/endpoint/JWTAuthenticationEntryPoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/filter/JWTAuthenticationTokenFilter.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/filter/JWTAuthenticationTokenFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.java" afterPath="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/skeleton/src/main/resources/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/controller/user/UserControllerTest.java" afterPath="$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/controller/user/UserControllerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/generatorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/spring/spring-web.xml" afterPath="$PROJECT_DIR$/skeleton/target/Skeleton/WEB-INF/classes/spring/spring-web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/skeleton/target/classes/generatorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skeleton/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/skeleton/target/classes/log4j.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,106 +61,101 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="UserControllerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/controller/user/UserControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="345" column="25" lean-forward="false" selection-start-line="345" selection-start-column="25" selection-end-line="345" selection-end-column="25" />
+            <state relative-caret-position="150">
+              <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common-util/pom.xml">
+      <file leaf-file-name="Scheduler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/scheduler/Scheduler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="162" column="21" lean-forward="false" selection-start-line="162" selection-start-column="21" selection-end-line="162" selection-end-column="21" />
+            <state relative-caret-position="271">
+              <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProtoStuffUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/ProtoStuffUtil.java">
+      <file leaf-file-name="JWTAuthenticationEntryPoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/endpoint/JWTAuthenticationEntryPoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-96">
+              <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JWTAuthenticationTokenFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/filter/JWTAuthenticationTokenFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="53" column="82" lean-forward="false" selection-start-line="53" selection-start-column="82" selection-end-line="53" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TokenManagerImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <caret line="87" column="30" lean-forward="false" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThirdPartyLoginHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/oauth/ThirdPartyLoginHelper.java">
+      <file leaf-file-name="Log.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar!/org/apache/commons/logging/Log.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state relative-caret-position="-504">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpClientManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/client/HttpClientManager.java">
+      <file leaf-file-name="SpringContextUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/SpringContextUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MailController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
-              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-              <folding>
-                <element signature="e#1453#1478#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/FileUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="78" column="4" lean-forward="false" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+              <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DateTimeUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/DateTimeUtil.java">
+      <file leaf-file-name="TokenController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="-366">
+              <caret line="88" column="28" lean-forward="false" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/skeleton/pom.xml">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="218" column="21" lean-forward="false" selection-start-line="218" selection-start-column="21" selection-end-line="218" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/skeleton/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="15" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="13" selection-end-column="15" />
+            <state relative-caret-position="126">
+              <caret line="167" column="57" lean-forward="false" selection-start-line="167" selection-start-column="57" selection-end-line="167" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -158,6 +179,12 @@
       <find>nickName</find>
       <find>403</find>
       <find>jackson</find>
+      <find>S</find>
+      <find>System.</find>
+      <find>System.ou</find>
+      <find>System.out.</find>
+      <find>System.out.println</find>
+      <find>System.out.print</find>
     </findStrings>
     <replaceStrings>
       <replace>skeleton</replace>
@@ -174,16 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/verification/impl/VerificationManagerImpl.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/enumeration/conversion/dao/UserStatusTypeHandler.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/enumeration/conversion/form/UserModeConverter.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/user/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/user/UserService.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/resources/spring/spring-service.xml" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/endpoint/AccessDeniedEndPoiintHandler.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/exception/user/AccessDeniedException.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/endpoint/RESTAccessDeniedHandler.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/util/SecurityUtil.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/dao/mail/MailDOMapper.java" />
         <option value="$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/service/mail/MailServiceTest.java" />
@@ -192,15 +209,10 @@
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/exception/mail/MailReceiverNotFoundException.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/mail/impl/MailServiceImpl.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/resources/i18n_zh_CN.properties" />
-        <option value="$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/controller/user/UserControllerTest.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/TokenManager.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/resources/redis.properties" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.java" />
         <option value="$PROJECT_DIR$/skeleton/README.md" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/user/impl/UserDetailsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java" />
-        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/domain/JWTUser.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/domain/entity/user/ResourceDO.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/dao/user/ResourceDOMapper.java" />
@@ -218,13 +230,28 @@
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/domain/entity/user/UserDO.java" />
         <option value="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/skeleton/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/FileUtil.java" />
-        <option value="$PROJECT_DIR$/skeleton/pom.xml" />
         <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/client/HttpConnectionManager.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/common-util/pom.xml" />
         <option value="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/client/HttpConnectionManager.java" />
         <option value="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/client/HttpClientManager.java" />
+        <option value="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/enumeration/conversion/StringToEnumConverterFactory.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/properties/CharsetProperties.java" />
+        <option value="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/properties/CharsetProperties.java" />
+        <option value="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/cache/impl/RedisCacheManagerImpl.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/CaptchaController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/skeleton/pom.xml" />
+        <option value="$PROJECT_DIR$/common-util/pom.xml" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/SpringContextUtil.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/controller/user/UserControllerTest.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/scheduler/Scheduler.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/endpoint/JWTAuthenticationEntryPoint.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/filter/JWTAuthenticationTokenFilter.java" />
+        <option value="$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.java" />
       </list>
     </option>
   </component>
@@ -286,7 +313,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -310,7 +336,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common-util" />
+              <option name="myItemId" value="skeleton" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -324,7 +350,77 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common-util" />
+              <option name="myItemId" value="skeleton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Skeleton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Skeleton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skeleton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Skeleton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Skeleton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skeleton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Skeleton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Skeleton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skeleton" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -340,7 +436,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="skeleton" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -354,7 +450,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common-util" />
+              <option name="myItemId" value="skeleton" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -370,17 +466,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="skeleton" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -390,7 +487,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.31111112" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chat" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="SearchEverywhereHistoryKey" value="Authentication&#9;FILE&#9;jar://C:/Users/songx/.m2/repository/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE.jar!/org/springframework/security/core/Authentication.class&#10;AccessDeniedHandler&#9;FILE&#9;jar://C:/Users/songx/.m2/repository/org/springframework/security/spring-security-web/4.2.2.RELEASE/spring-security-web-4.2.2.RELEASE.jar!/org/springframework/security/web/access/AccessDeniedHandler.class&#10;UserStatusInvalid&#9;FILE&#9;file://D:/idea/Skeleton/skeleton/src/main/java/cn/sinjinsong/skeleton/exception/token/UserStatusInvalidException.java" />
@@ -1192,7 +1289,13 @@
       <workItem from="1495544013620" duration="1430000" />
       <workItem from="1495548212625" duration="615000" />
       <workItem from="1495551969273" duration="1421000" />
-      <workItem from="1495612719402" duration="958000" />
+      <workItem from="1495612719402" duration="1124000" />
+      <workItem from="1495624820090" duration="15000" />
+      <workItem from="1495633200748" duration="591000" />
+      <workItem from="1495634961156" duration="18000" />
+      <workItem from="1495792880881" duration="1101000" />
+      <workItem from="1495797178248" duration="659000" />
+      <workItem from="1495798854620" duration="2412000" />
     </task>
     <servers />
   </component>
@@ -1229,7 +1332,16 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59875000" />
+    <option name="totallyTimeSpent" value="64837000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -1237,6 +1349,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29076397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7833523" sideWeight="0.50208336" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7440273" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0875" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1250,27 +1363,27 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11516534" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36031926" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09464082" sideWeight="0.49791667" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22234891" sideWeight="0.49791667" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28125" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48916763" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36031926" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70581526" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1290,93 +1403,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/mail/impl/MailServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/controller/user/UserControllerTest.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/TokenManager.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/security/Principal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/README.md" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/user/impl/UserDetailsServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/FileController.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/CaptchaController.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/domain/JWTUser.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/domain/entity/user/ResourceDO.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/resources/mapper/MailTextDOMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/resources/mapper/ResourceDOMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/dao/user/ResourceDOMapper.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/config/URLGrantedAuthority.java" />
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/config/RESTWebSecurityConfig.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.8.8/jackson-datatype-jsr310-2.8.8.jar!/com/fasterxml/jackson/datatype/jsr310/ser/LocalDateSerializer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.8.8/jackson-datatype-jsr310-2.8.8-sources.jar!/com/fasterxml/jackson/datatype/jsr310/ser/LocalDateSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/resources/spring/spring-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="45" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/resources/email.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/resources/spring/spring-redis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/cache/CacheManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/cache/RedisCacheConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/resources/redis.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.16/lombok-1.16.16.jar!/lombok/Data.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.16/lombok-1.16.16-sources.jar!/lombok/Data.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-221">
@@ -1388,13 +1414,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1776">
           <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/domain/Captcha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1461,26 +1480,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/BaseSpringTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skeleton/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="13" column="15" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="13" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/DateTimeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/ProtoStuffUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/client/HttpClientManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/oauth/ThirdPartyLoginHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/enumeration/conversion/StringToEnumConverterFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/domain/Captcha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/properties/CharsetProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/cache/impl/RedisCacheManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-447">
+          <caret line="80" column="76" lean-forward="false" selection-start-line="80" selection-start-column="76" selection-end-line="80" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/coder/AESUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/InternationalizeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/enumeration/mail/MailStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/enumeration/user/UserStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/https/HTTPSCoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/https/HTTPSPKCSCoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/email/EmailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/email/impl/EmailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/service/mail/impl/MailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/CaptchaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="56" column="33" lean-forward="false" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1496,69 +1636,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/DateTimeUtil.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="78" column="4" lean-forward="false" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+        <state relative-caret-position="432">
+          <caret line="141" column="25" lean-forward="false" selection-start-line="141" selection-start-column="25" selection-end-line="141" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/skeleton/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="218" column="21" lean-forward="false" selection-start-line="218" selection-start-column="21" selection-end-line="218" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/ProtoStuffUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/oauth/ThirdPartyLoginHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="345" column="25" lean-forward="false" selection-start-line="345" selection-start-column="25" selection-end-line="345" selection-end-column="25" />
+        <state relative-caret-position="63">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="94" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common-util/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="162" column="21" lean-forward="false" selection-start-line="162" selection-start-column="21" selection-end-line="162" selection-end-column="21" />
+        <state relative-caret-position="796">
+          <caret line="137" column="6" lean-forward="true" selection-start-line="137" selection-start-column="6" selection-end-line="137" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/client/HttpClientManager.java">
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/BaseSpringTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar!/org/slf4j/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar!/org/slf4j/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="355" column="16" lean-forward="false" selection-start-line="355" selection-start-column="16" selection-end-line="355" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="49" column="40" lean-forward="false" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-util/src/main/java/cn/sinjinsong/common/util/SpringContextUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/mail/MailController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="e#1453#1478#0" expanded="true" />
-          </folding>
+          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/TokenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-366">
+          <caret line="88" column="28" lean-forward="false" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/controller/user/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="167" column="57" lean-forward="false" selection-start-line="167" selection-start-column="57" selection-end-line="167" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/test/java/cn/sinjinsong/skeleton/controller/user/UserControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/scheduler/Scheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/endpoint/JWTAuthenticationEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.2/commons-logging-1.2.jar!/org/apache/commons/logging/Log.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar!/org/apache/commons/logging/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/filter/JWTAuthenticationTokenFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="53" column="82" lean-forward="false" selection-start-line="53" selection-start-column="82" selection-end-line="53" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/src/main/java/cn/sinjinsong/skeleton/security/token/impl/TokenManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="87" column="30" lean-forward="false" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>

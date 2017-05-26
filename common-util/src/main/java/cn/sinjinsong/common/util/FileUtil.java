@@ -5,6 +5,7 @@ import cn.sinjinsong.common.enumeration.FileType;
 import cn.sinjinsong.common.exception.file.FileDownloadException;
 import cn.sinjinsong.common.exception.file.FileNotFoundException;
 import cn.sinjinsong.common.exception.file.FileUploadException;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpHeaders;
@@ -22,7 +23,7 @@ import java.nio.channels.FileChannel;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.time.LocalDate;
-
+@Slf4j
 public final class FileUtil {
     private FileUtil() {
     }
@@ -35,9 +36,10 @@ public final class FileUtil {
         LocalDate today = LocalDate.now();
         File dir = new File(root, "/" + today.getYear() + "/" + today.getMonthValue() + "/" + today.getDayOfMonth());
         if (!dir.exists()) {
-            dir.mkdirs();
+            if(!dir.mkdirs()){
+                 throw new FileUploadException(file.getOriginalFilename());
+            }
         }
-
         File dest;
         try {
             dest = new File(dir, String.valueOf(System.currentTimeMillis()) + "_" + file.getOriginalFilename());
@@ -45,7 +47,7 @@ public final class FileUtil {
         } catch (IOException e) {
             throw new FileUploadException(file.getOriginalFilename());
         }
-        System.out.println(dest.getAbsolutePath());
+        log.info(dest.getAbsolutePath());
         return dest.getAbsolutePath().substring(dest.getAbsolutePath().indexOf("\\WEB-INF"));
     }
 
@@ -54,7 +56,7 @@ public final class FileUtil {
         File file = new File(servletContext.getRealPath(relativePath));
         String fileName = file.getName();
         if (!file.exists()) {
-            System.out.println("文件不存在");
+            log.error("文件不存在");
             throw new FileNotFoundException(fileName);
         }
         HttpHeaders headers = new HttpHeaders();
@@ -68,11 +70,12 @@ public final class FileUtil {
         try {
             in = new FileInputStream(file);
             IOUtils.copy(in, response.getOutputStream());//将字节数据从流1拷贝到流2
+            in.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("文件传输失败");
+            log.error("文件传输失败");
             throw new FileDownloadException(file.getName());
         }
     }

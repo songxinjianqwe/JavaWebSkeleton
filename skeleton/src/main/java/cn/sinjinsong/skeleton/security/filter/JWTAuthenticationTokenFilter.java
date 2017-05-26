@@ -3,6 +3,7 @@ package cn.sinjinsong.skeleton.security.filter;
 import cn.sinjinsong.skeleton.properties.AuthenticationProperties;
 import cn.sinjinsong.skeleton.security.domain.TokenCheckResult;
 import cn.sinjinsong.skeleton.security.token.TokenManager;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Component
+@Slf4j
 public class JWTAuthenticationTokenFilter extends OncePerRequestFilter {
 
     @Autowired
@@ -31,16 +33,16 @@ public class JWTAuthenticationTokenFilter extends OncePerRequestFilter {
             HttpServletRequest request,
             HttpServletResponse response,
             FilterChain chain) throws ServletException, IOException {
-        System.out.println("经过JWTAuthenticationTokenFilter");
+        log.info("经过JWTAuthenticationTokenFilter");
         //拿到token
         String token = request.getHeader(AuthenticationProperties.AUTH_HEADER);
         //验证token，如果无效，结果返回exception；如果有效，结果返回username
         TokenCheckResult result = tokenManager.checkToken(token);
         if (!result.isValid()) {
-            System.out.println("Token无效");
+            log.info("Token无效");
             request.setAttribute(AuthenticationProperties.EXCEPTION_ATTR_NAME, result.getException());
         } else {
-            System.out.println("checking authentication " + result);
+            log.info("checking authentication {}", result);
             UserDetails userDetails = userDetailsService.loadUserByUsername(result.getUsername());
 
             //如果未登录
@@ -49,7 +51,7 @@ public class JWTAuthenticationTokenFilter extends OncePerRequestFilter {
                         userDetails, null, userDetails.getAuthorities());
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(
                         request));
-                System.out.println("authenticated user " + result + ", setting security context");
+                log.info("authenticated user {} ,setting security context", result);
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
         }

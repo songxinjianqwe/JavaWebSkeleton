@@ -12,6 +12,7 @@ import cn.sinjinsong.skeleton.security.util.SecurityUtil;
 import cn.sinjinsong.skeleton.service.mail.MailService;
 import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.*;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -27,6 +28,7 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("mails")
 @Api(value = "mails", description = "站内信模块")
+@Slf4j
 public class MailController {
     @Autowired
     private MailService mailService;
@@ -67,7 +69,7 @@ public class MailController {
             throw new ValidationException(result.getFieldErrors());
         }
         Long senderId = SecurityUtil.currentUserId();
-        System.out.println("senderId"+senderId);
+        log.info("senderId:{}",senderId);
         if (mailDTO.getSendMode() == SendMode.BATCH) {
             mailService.send(senderId, mailDTO.getReceivers(), mailDTO.getText());
         } else if (mailDTO.getSendMode() == SendMode.BROADCAST) {

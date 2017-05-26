@@ -7,6 +7,7 @@ import cn.sinjinsong.skeleton.security.domain.TokenCheckResult;
 import cn.sinjinsong.skeleton.security.token.TokenManager;
 import cn.sinjinsong.skeleton.security.token.TokenState;
 import io.jsonwebtoken.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -19,6 +20,7 @@ import java.util.Date;
  * Created by SinjinSong on 2017/4/27.
  */
 @Component
+@Slf4j
 public class TokenManagerImpl implements TokenManager {
     @Autowired
     private CacheManager cacheManager;
@@ -83,7 +85,7 @@ public class TokenManagerImpl implements TokenManager {
                     .setSigningKey(DatatypeConverter.parseBase64Binary(authenticationProperties.getSecretKey()))
                     .parseClaimsJws(token).getBody();
         } catch (ExpiredJwtException e) {
-            System.out.printf("Token过期,%s\n", token);
+            log.info("Token过期 {}",token);
             return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.EXPIRED.toString())).build();
         } catch (Exception e) {
             return new TokenCheckResult.TokenCheckResultBuilder().inValid().exception(new TokenStateInvalidException(TokenState.INVALID.toString())).build();

@@ -25,7 +25,26 @@
 
     <!-- 解决静态资源访问问题 -->
     <mvc:default-servlet-handler/>
-    <mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>
+    <mvc:annotation-driven conversion-service="conversionService">
+        <!--<mvc:message-converters>-->
+            <!--<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+                <!--<property name="objectMapper">-->
+                    <!--<bean class="com.fasterxml.jackson.databind.ObjectMapper">-->
+                        <!--&lt;!&ndash; 处理responseBody 里面日期类型 &ndash;&gt;-->
+                        <!--<property name="dateFormat">-->
+                            <!--<bean class="java.text.SimpleDateFormat">-->
+                                <!--<constructor-arg type="java.lang.String" value="yyyy-MM-dd HH:mm:ss"/>-->
+                            <!--</bean>-->
+                        <!--</property>-->
+                        <!--&lt;!&ndash; 为null字段时不显示 &ndash;&gt;-->
+                        <!--<property name="serializationInclusion">-->
+                            <!--<value type="com.fasterxml.jackson.annotation.JsonInclude.Include">NON_NULL</value>-->
+                        <!--</property>-->
+                    <!--</bean>-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</mvc:message-converters>-->
+    </mvc:annotation-driven>
 
     <!--配置JSP　显示ViewResolver-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -53,5 +72,5 @@
             <bean class="org.springframework.security.web.method.annotation.AuthenticationPrincipalArgumentResolver"/>
         </mvc:argument-resolvers>
     </mvc:annotation-driven>
-    
+
 </beans>

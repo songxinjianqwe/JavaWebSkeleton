@@ -1,6 +1,7 @@
 package cn.sinjinsong.common.cache.impl;
 
 import cn.sinjinsong.common.cache.CacheManager;
+import cn.sinjinsong.common.properties.CharsetProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
@@ -25,7 +26,7 @@ public class RedisCacheManagerImpl implements CacheManager {
 
 
     public boolean put(String key, Object obj) {
-        final byte[] keyBytes = key.getBytes();
+        final byte[] keyBytes = key.getBytes(CharsetProperties.charset);
         RedisSerializer valueSerializer = redisTemplate.getValueSerializer();
         final byte[] valueBytes = valueSerializer.serialize(obj);
         boolean result = redisTemplate.execute(new RedisCallback<Boolean>() {
@@ -38,7 +39,7 @@ public class RedisCacheManagerImpl implements CacheManager {
     }
 
     public <T> boolean putWithExpireTime(String key, T obj, final long expireTime) {
-        final byte[] keyBytes = key.getBytes();
+        final byte[] keyBytes = key.getBytes(CharsetProperties.charset);
         RedisSerializer valueSerializer = redisTemplate.getValueSerializer();
         final byte[] valueBytes = valueSerializer.serialize(obj);
         boolean result = redisTemplate.execute(new RedisCallback<Boolean>() {
@@ -63,7 +64,7 @@ public class RedisCacheManagerImpl implements CacheManager {
         byte[] result = redisTemplate.execute(new RedisCallback<byte[]>() {
             @Override
             public byte[] doInRedis(RedisConnection connection) throws DataAccessException {
-                return connection.get(key.getBytes());
+                return connection.get(key.getBytes(CharsetProperties.charset));
             }
         });
         if (result == null) {
@@ -77,7 +78,7 @@ public class RedisCacheManagerImpl implements CacheManager {
         byte[] result = redisTemplate.execute(new RedisCallback<byte[]>() {
             @Override
             public byte[] doInRedis(RedisConnection connection) throws DataAccessException {
-                return connection.get(key.getBytes());
+                return connection.get(key.getBytes(CharsetProperties.charset));
             }
         });
         if (result == null) {

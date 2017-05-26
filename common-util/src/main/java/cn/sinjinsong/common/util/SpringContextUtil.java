@@ -1,5 +1,6 @@
 package cn.sinjinsong.common.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
@@ -9,6 +10,7 @@ import org.springframework.context.ApplicationContextAware;
 /**
  * Created by SinjinSong on 2017/3/16.
  */
+@Slf4j
 public final class SpringContextUtil implements ApplicationContextAware {
     private SpringContextUtil() {
     }
@@ -33,7 +35,7 @@ public final class SpringContextUtil implements ApplicationContextAware {
                 bean = (T) applicationContext.getBean(beanId);
             }
         } catch (NoSuchBeanDefinitionException e) {
-            System.out.println("获取bean失败");
+            log.error("获取bean失败");
             return null;
         }
         return bean;
