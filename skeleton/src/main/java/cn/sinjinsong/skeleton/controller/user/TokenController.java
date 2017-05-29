@@ -8,9 +8,9 @@ import cn.sinjinsong.skeleton.enumeration.user.UserStatus;
 import cn.sinjinsong.skeleton.exception.token.CaptchaValidationException;
 import cn.sinjinsong.skeleton.exception.token.LoginInfoInvalidException;
 import cn.sinjinsong.skeleton.exception.token.UserStatusInvalidException;
+import cn.sinjinsong.skeleton.security.domain.JWTUser;
 import cn.sinjinsong.skeleton.security.login.LoginHandler;
 import cn.sinjinsong.skeleton.security.token.TokenManager;
-import cn.sinjinsong.skeleton.security.util.SecurityUtil;
 import cn.sinjinsong.skeleton.security.verification.VerificationManager;
 import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
@@ -21,6 +21,7 @@ import org.springframework.security.authentication.LockedException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -119,7 +120,7 @@ public class TokenController {
     @ApiResponses(value = {
             @ApiResponse(code = 401, message = "未登录")
     })
-    public void logout() {
-        tokenManager.deleteToken(SecurityUtil.currentUsername());
+    public void logout(@AuthenticationPrincipal JWTUser user) {
+        tokenManager.deleteToken(user.getUsername());
     }
 }

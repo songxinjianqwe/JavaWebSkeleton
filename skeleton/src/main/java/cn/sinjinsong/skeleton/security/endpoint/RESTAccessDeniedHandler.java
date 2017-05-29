@@ -24,7 +24,7 @@ public class RESTAccessDeniedHandler implements AccessDeniedHandler {
     public void handle(HttpServletRequest request, HttpServletResponse response, org.springframework.security.access.AccessDeniedException accessDeniedException) throws IOException, ServletException {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         BaseRESTException exception = new AccessDeniedException(authentication.getAuthorities().toString());
-        response.setContentType("text/html;charset=utf-8");
+        response.setContentType("application/json;charset=UTF-8");
         response.setStatus(exception.getStatus().value());
         response.getWriter().append(JsonUtil.json(new RESTError(exception.getStatus(),exception.getCode(),exception.getErrors(),exception.getMoreInfoURL())));
     }

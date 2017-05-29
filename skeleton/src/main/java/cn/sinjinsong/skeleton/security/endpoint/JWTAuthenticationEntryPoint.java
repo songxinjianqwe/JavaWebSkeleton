@@ -30,7 +30,7 @@ public class JWTAuthenticationEntryPoint implements AuthenticationEntryPoint, Se
         if(request.getAttribute(AuthenticationProperties.EXCEPTION_ATTR_NAME) != null){
             BaseRESTException exception = (BaseRESTException) request.getAttribute(AuthenticationProperties.EXCEPTION_ATTR_NAME);
             response.setStatus(exception.getStatus().value());
-            response.setContentType("text/html;charset=utf-8");
+            response.setContentType("application/json;charset=UTF-8");
             response.getWriter().append(JsonUtil.json(new RESTError(exception.getStatus(),exception.getCode(),exception.getErrors(),exception.getMoreInfoURL())));
         }else{
             response.setStatus(401);

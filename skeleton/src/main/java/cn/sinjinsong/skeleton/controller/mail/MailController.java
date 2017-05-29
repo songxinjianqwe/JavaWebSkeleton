@@ -8,7 +8,7 @@ import cn.sinjinsong.skeleton.enumeration.mail.QueryMailTarget;
 import cn.sinjinsong.skeleton.enumeration.mail.SendMode;
 import cn.sinjinsong.skeleton.exception.mail.MailStatusNotFoundException;
 import cn.sinjinsong.skeleton.exception.mail.MailTargetNotFoundException;
-import cn.sinjinsong.skeleton.security.util.SecurityUtil;
+import cn.sinjinsong.skeleton.security.domain.JWTUser;
 import cn.sinjinsong.skeleton.service.mail.MailService;
 import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.*;
@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -64,11 +65,11 @@ public class MailController {
             @ApiResponse(code = 400, message = "mail对象属性校验失败"),
             @ApiResponse(code = 403, message = "广播功能仅支持管理员"),
     })
-    public void sendMails(@RequestBody @Valid @ApiParam(value = "站内信对象", required = true) MailDTO mailDTO, BindingResult result) {
+    public void sendMails(@RequestBody @Valid @ApiParam(value = "站内信对象", required = true) MailDTO mailDTO, BindingResult result, @AuthenticationPrincipal JWTUser user) {
         if (result.hasErrors()) {
             throw new ValidationException(result.getFieldErrors());
         }
-        Long senderId = SecurityUtil.currentUserId();
+        Long senderId = user.getId();
         log.info("senderId:{}",senderId);
         if (mailDTO.getSendMode() == SendMode.BATCH) {
             mailService.send(senderId, mailDTO.getReceivers(), mailDTO.getText());
