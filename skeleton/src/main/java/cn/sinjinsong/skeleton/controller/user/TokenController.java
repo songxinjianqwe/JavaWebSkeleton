@@ -8,6 +8,7 @@ import cn.sinjinsong.skeleton.enumeration.user.UserStatus;
 import cn.sinjinsong.skeleton.exception.token.CaptchaValidationException;
 import cn.sinjinsong.skeleton.exception.token.LoginInfoInvalidException;
 import cn.sinjinsong.skeleton.exception.token.UserStatusInvalidException;
+import cn.sinjinsong.skeleton.exception.user.LogoutDuplicatedException;
 import cn.sinjinsong.skeleton.security.domain.JWTUser;
 import cn.sinjinsong.skeleton.security.login.LoginHandler;
 import cn.sinjinsong.skeleton.security.token.TokenManager;
@@ -121,6 +122,9 @@ public class TokenController {
             @ApiResponse(code = 401, message = "未登录")
     })
     public void logout(@AuthenticationPrincipal JWTUser user) {
+        if(user == null){
+            throw new LogoutDuplicatedException();
+        }
         tokenManager.deleteToken(user.getUsername());
     }
 }
