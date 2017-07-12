@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class LoggingAspect {
 	private static final Logger logger = Logger.getLogger(LoggingAspect.class.getName());
 	
-	@Pointcut("execution(* cn.sinjinsong.*.service.*.*(..))||execution(* cn.sinjinsong.*.controller.*.*(..))")
+	@Pointcut("@within(org.springframework.stereotype.Service)||@annotation(org.springframework.web.bind.annotation.RequestMapping)")
 	public void declareJoinPointExpression() {
 	}
 

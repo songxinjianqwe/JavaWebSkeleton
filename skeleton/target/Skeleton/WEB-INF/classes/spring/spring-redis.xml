@@ -48,7 +48,7 @@
         <constructor-arg name="redisOperations" ref="redisTemplate"/>
         <property name="defaultExpiration" value="${redis.expireTime}"/>
     </bean>
-
+    
     <!-- 配置RedisCacheConfig -->
     <bean id="redisCacheConfig" class="cn.sinjinsong.common.cache.RedisCacheConfig">
         <constructor-arg ref="jedisConnectionFactory"/>

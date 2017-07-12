@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/task 
+        http://www.springframework.org/schema/task/spring-task.xsd 
+        ">
+
+    <context:component-scan
+            base-package=
+                    "cn.sinjinsong.skeleton.service,
+                    cn.sinjinsong.skeleton.scheduler,
+                    cn.sinjinsong.skeleton.properties"/>
+
+    <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:token.properties</value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true"></property>
+    </bean>
+
+
+    <!--    
+        id：当配置多个executor时，被@Async("id")指定使用；也被作为线程名的前缀。
+        pool-size：
+        core size：最小的线程数，缺省：1
+        max size：最大的线程数，缺省：Integer.MAX_VALUE
+        queue-capacity：当最小的线程数已经被占用满后，新的任务会被放进queue里面，当这个queue的capacity也被占满之后，pool里面会创建新线程处理这个任务，直到总线程数达到了max size，这时系统会拒绝这个任务并抛出TaskRejectedException异常（缺省配置的情况下，可以通过rejection-policy来决定如何处理这种情况）。缺省值为：Integer.MAX_VALUE
+        keep-alive：超过core size的那些线程，任务完成后，再经过这个时长（秒）会被结束掉
+        rejection-policy：当pool已经达到max size的时候，如何处理新任务
+        ABORT（缺省）：抛出TaskRejectedException异常，然后不执行
+        DISCARD：不执行，也不抛出异常
+        DISCARD_OLDEST：丢弃queue中最旧的那个任务
+        CALLER_RUNS：不在新线程中执行任务，而是有调用者所在的线程来执行
+    -->
+    <task:executor id="emailExecutor" pool-size="10-20" queue-capacity="100" rejection-policy="ABORT" keep-alive="120"/>
+
+    <task:scheduler id="scheduler" pool-size="10"/>
+
+    <bean id="mailExceptionHandler" class="cn.sinjinsong.skeleton.exception.handler.EmailExceptionHandler"/>
+
+    <task:annotation-driven executor="emailExecutor" scheduler="scheduler" exception-handler="mailExceptionHandler"
+                            proxy-target-class="true"/>
+
+    <context:annotation-config/>
+
+    <!-- 使用注解来配置AOP -->
+    <aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+    <aop:config proxy-target-class="true"></aop:config>
+
+    <bean id="springContextUtil" class="cn.sinjinsong.common.util.SpringContextUtil"></bean>
+
+</beans>

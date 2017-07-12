@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-    <context:component-scan base-package="cn.sinjinsong.skeleton.client"/>
+    <context:component-scan base-package="cn.sinjinsong.common.client"/>
 
     <bean id="requestFactory" class="org.springframework.http.client.SimpleClientHttpRequestFactory">
         <property name="readTimeout" value="10000"/>

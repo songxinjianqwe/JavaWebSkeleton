@@ -58,7 +58,7 @@
   然后调用MailService的sendHTML方法，其中的subject参数就是之前的subject。（subject出现在三个地方，mailSubject.properties的key，html文件名，sendHTML的第二个参数） 
 
 
-### 登录 Shiro+JWT
+### 登录 Shiro+JWT（失败）
 - 当访问时，一定会经过filter，过滤器会判断是否是登录请求（匹配loginURL）
     - 如果是登录，那么会根据传来的用户标识和密码来生成UsernamePasswordToken，
       然后会将这个UsernamePasswordToken(继承自AuthenticationToken)交给FormRealm，它会取出其中的用户名进行查询。
